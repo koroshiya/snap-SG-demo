@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Sables Grimoire Demo
+GenericName=Sables Grimoire Demo
+Comment=Visual novel about monster girls and magic
+Exec=zetsubougames-sgdemo
+Icon=${SNAP}/meta/gui/zetsubougames-sgdemo.png
+Terminal=false
+Type=Application
+Keywords=game;sable;sables;grimoire;monster;girl;girls;
+Categories=Game

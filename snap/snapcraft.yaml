@@ -1,0 +1,38 @@
+name: zetsubougames-sgdemo
+base: core20
+version: '1.02-DEMO'
+summary: Visual novel about monster girls and magic
+description: |
+  Visual novel about monster girls and magic
+website: https://zetsubou.games/
+license: Proprietary
+
+grade: stable
+confinement: strict
+compression: lzo
+
+parts:
+  app:
+    source: https://cdn.zetsubou.games/Flatpak/SablesGrimoireDemo/builds/v1.2.0-all.tar.bz2
+    plugin: dump
+
+apps:
+  zetsubougames-sgdemo:
+    command: SablesGrimoire.sh
+    extensions: [gnome-3-38]
+    plugs:
+      - x11
+      - opengl
+      - audio-playback
+      - joystick
+
+layout:
+  $SNAP/game/saves:
+    symlink: $SNAP_DATA/saves
+  $SNAP/game/cache:
+    symlink: $SNAP_DATA/cache
+
+architectures:
+  - build-on: amd64
+  - build-on: arm64
+  - build-on: armhf
